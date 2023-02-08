@@ -2,7 +2,7 @@ package LeetCodeSolutions;
 
 import java.util.HashMap;
 
-public class LeetCodeProblem_1_Two_Sum {
+public class LCP_1_Two_Sum {
 
 
     public void LeetCodeProblem_1_Two_Sum(){
