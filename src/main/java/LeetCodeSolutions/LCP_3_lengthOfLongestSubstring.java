@@ -3,7 +3,9 @@ package LeetCodeSolutions;
 //https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Locale;
+import java.util.Set;
 
 public class LCP_3_lengthOfLongestSubstring {
 
@@ -15,41 +17,26 @@ public class LCP_3_lengthOfLongestSubstring {
 
     public int lengthOfLongestSubstring(String s) {
 
-        HashMap<String, Integer> newMap = new HashMap<>();
+        Set<Character> set = new HashSet<>();
 
-        s.toLowerCase(Locale.ROOT);
-        char[] array = s.toCharArray();
-        String substring = "";
-        int subString_length = 0;
+        int left = 0;
+        int right = 0;
+        int res = 0;
 
-        int i = 0;
-        while (i < array.length) {
+        while (right < s.length()) {
 
-            String currentLetter = array[i] + "";
-            String prevLetter = "";
-
-            if (substring.equals("")) {
-                substring = currentLetter;
-                subString_length = substring.length();
-                newMap.put(substring, subString_length);
-                prevLetter = currentLetter;
-
+            char charAtRight = s.charAt(right);
+            char charAtLeft = s.charAt(left);
+            if (!set.contains(charAtRight)) {
+                set.add(charAtRight);
+                res = Math.max(res, set.size());
+                right++;
             } else {
-                if (currentLetter.equals(prevLetter)) {
-                    substring = "";
-                    subString_length = 0;
-//                    newMap.put(currentLetter, newMap.get(currentLetter) + 1);
-                }
-                else if(newMap.containsValue(currentLetter)){
-
-                }
-                substring = substring + currentLetter;
-                newMap.put(substring,substring.length());
+                set.remove(charAtLeft);
+                left++;
             }
 
         }
-
-
-        return 0;
+        return res;
     }
 }
