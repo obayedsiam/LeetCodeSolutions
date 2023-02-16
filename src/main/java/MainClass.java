@@ -1,15 +1,12 @@
 
-import LeetCodeSolutions.LCP_3_lengthOfLongestSubstring;
-import LeetCodeSolutions.LCP_5_OnePlus;
-import LeetCodeSolutions.LCP_6_Merge_Sorted;
-import LeetCodeSolutions.LCP_7_Check_Palindrome_Without_Convert_to_String;
+import LeetCodeSolutions.*;
 
 public class MainClass {
 
         public static void main(String [] args){
 
-            LCP_3_lengthOfLongestSubstring substring = new LCP_3_lengthOfLongestSubstring();
-            substring.lengthOfLongestSubstring();
+            LCP_8_RomanToInteger roman = new LCP_8_RomanToInteger();
+            roman.start();
 
         }
     }
