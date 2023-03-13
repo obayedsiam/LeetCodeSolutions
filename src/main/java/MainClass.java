@@ -5,8 +5,8 @@ public class MainClass {
 
         public static void main(String [] args){
 
-            LCP_15_addBinary binary = new LCP_15_addBinary();
-            binary.start();
+            LCP_22_SymetricTree tree = new LCP_22_SymetricTree();
+            tree.start();
         }
     }
 
