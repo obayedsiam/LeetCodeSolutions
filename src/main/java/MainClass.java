@@ -5,7 +5,7 @@ public class MainClass {
 
         public static void main(String [] args){
 
-            LCP_22_SymetricTree tree = new LCP_22_SymetricTree();
+            LECP_24_Max_Depth tree = new LECP_24_Max_Depth();
             tree.start();
         }
     }
